@@ -1,0 +1,128 @@
+Speed Evaluation,,,,,,,,,,
+Key Encapsulation Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [cycles] (mean),Key Generation [cycles] (min),Key Generation [cycles] (max),Encapsulation [cycles] (mean),Encapsulation [cycles] (min),Encapsulation [cycles] (max),Decapsulation [cycles] (mean),Decapsulation [cycles] (min),Decapsulation [cycles] (max)
+Signature Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [cycles] (mean),Key Generation [cycles] (min),Key Generation [cycles] (max),Sign [cycles] (mean),Sign [cycles] (min),Sign [cycles] (max),Verify [cycles] (mean),Verify [cycles] (min),Verify [cycles] (max)
+crossv2.0-sha3-r-sdp-1-balance (10 executions),light,503989,499745,510417,38252057,38248034,38257795,18727929,18725108,18732343
+crossv2.0-sha3-r-sdp-1-balance (10 executions),ref,400650,396532,406791,38983760,38979723,38989653,18645618,18642794,18650307
+crossv2.0-sha3-r-sdp-1-fast (10 executions),light,503882,499755,509801,21700444,21698340,21710883,11696156,11695320,11697077
+crossv2.0-sha3-r-sdp-1-fast (10 executions),ref,400623,396550,406579,21223821,21221361,21234472,11765938,11764892,11767036
+crossv2.0-sha3-r-sdp-1-small (10 executions),light,503891,499864,509926,79393563,79390538,79400995,36748506,36746360,36753037
+crossv2.0-sha3-r-sdp-1-small (10 executions),ref,400624,396633,406695,76714985,76711403,76722179,36498125,36495770,36502858
+crossv2.0-sha3-r-sdp-3-balance (10 executions),light,1163435,1159045,1169516,98316599,98308093,98321720,41903553,41900581,41907513
+crossv2.0-sha3-r-sdp-3-balance (10 executions),ref,964690,960476,970769,92882489,92873458,92887343,41773953,41771514,41776979
+crossv2.0-sha3-r-sdp-3-fast (10 executions),light,1163571,1159452,1169679,59404297,59395495,59410909,30882496,30880712,30885153
+crossv2.0-sha3-r-sdp-3-fast (10 executions),ref,964827,960654,970897,53998773,53989225,54005618,31197929,31196032,31201128
+crossv2.0-sha3-r-sdp-3-small (10 executions),light,1163768,1159514,1169576,147027977,147019870,147039769,59059438,59055169,59065710
+crossv2.0-sha3-r-sdp-3-small (1 executions),ref,0,0,0,0,0,0,0,0,0
+crossv2.0-sha3-r-sdp-5-balance (10 executions),light,2074567,2069986,2081440,169133731,169125445,169143967,73021002,73016172,73029769
+crossv2.0-sha3-r-sdp-5-balance (1 executions),ref,0,0,0,0,0,0,0,0,0
+crossv2.0-sha3-r-sdp-5-fast (10 executions),light,2074221,2069733,2081252,118850774,118842012,118854671,58067980,58065610,58070794
+crossv2.0-sha3-r-sdp-5-fast (10 executions),ref,1672453,1668119,1678926,108905274,108896516,108909410,58705457,58702956,58707799
+crossv2.0-sha3-r-sdp-5-small (1 executions),light,0,0,0,0,0,0,0,0,0
+crossv2.0-sha3-r-sdp-5-small (1 executions),ref,0,0,0,0,0,0,0,0,0
+crossv2.0-sha3-r-sdpg-1-balance (10 executions),light,224864,220779,230975,26641697,26639402,26650142,15974166,15972981,15977306
+crossv2.0-sha3-r-sdpg-1-balance (10 executions),ref,196606,192527,202690,26038598,26036275,26046990,15931545,15930404,15934696
+crossv2.0-sha3-r-sdpg-1-fast (10 executions),light,224901,220814,230922,13494721,13492588,13504155,7720453,7719199,7721447
+crossv2.0-sha3-r-sdpg-1-fast (10 executions),ref,196637,192575,202634,12417330,12415214,12426772,7771032,7769757,7771985
+crossv2.0-sha3-r-sdpg-1-small (10 executions),light,224859,220793,230816,52302581,52298963,52311534,31979585,31977022,31982494
+crossv2.0-sha3-r-sdpg-1-small (10 executions),ref,196599,192535,202558,51829395,51825759,51838351,31857882,31855233,31860841
+crossv2.0-sha3-r-sdpg-3-balance (10 executions),light,492132,487578,498467,41363845,41357615,41370230,25429475,25428102,25430999
+crossv2.0-sha3-r-sdpg-3-balance (10 executions),ref,417451,413341,423507,40329786,40323543,40336181,25539547,25538501,25541440
+crossv2.0-sha3-r-sdpg-3-fast (10 executions),light,492204,487543,498096,32004460,31997932,32010799,19309900,19308768,19310984
+crossv2.0-sha3-r-sdpg-3-fast (10 executions),ref,417483,413297,423515,29894319,29887742,29900689,19490288,19488958,19491628
+crossv2.0-sha3-r-sdpg-3-small (10 executions),light,492230,487484,498486,76710872,76703967,76716138,48629643,48627224,48632678
+crossv2.0-sha3-r-sdpg-3-small (10 executions),ref,417467,413243,423497,75750187,75743283,75755137,48561166,48558970,48564566
+crossv2.0-sha3-r-sdpg-5-balance (10 executions),light,845941,841776,852460,75133162,75123903,75137053,45984771,45982749,45987038
+crossv2.0-sha3-r-sdpg-5-balance (10 executions),ref,710456,706326,716647,73740824,73731844,73744750,45889270,45887230,45891554
+crossv2.0-sha3-r-sdpg-5-fast (10 executions),light,845972,841688,852263,60208488,60200112,60212986,37698769,37697051,37700886
+crossv2.0-sha3-r-sdpg-5-fast (10 executions),ref,710453,706265,716501,57668575,57660162,57673077,38193667,38191962,38195779
+crossv2.0-sha3-r-sdpg-5-small (10 executions),light,845990,841790,852532,131988274,131979340,131992565,80322879,80320918,80325479
+crossv2.0-sha3-r-sdpg-5-small (1 executions),ref,0,0,0,0,0,0,0,0,0
+Memory Evaluation,,,,,,,,,,
+Key Encapsulation Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [bytes],Encapsulation [bytes],Decapsulation [bytes],,,,,,
+Signature Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [bytes],Sign [bytes],Verify [bytes],,,,,,
+crossv2.0-sha3-r-sdp-1-balance,light,1296,109056,44408,,,,,,
+crossv2.0-sha3-r-sdp-1-balance,ref,8112,210016,113184,,,,,,
+crossv2.0-sha3-r-sdp-1-fast,light,1296,54608,14776,,,,,,
+crossv2.0-sha3-r-sdp-1-fast,ref,8112,116224,56720,,,,,,
+crossv2.0-sha3-r-sdp-1-small,light,1296,215344,83528,,,,,,
+crossv2.0-sha3-r-sdp-1-small,ref,8112,421392,223832,,,,,,
+crossv2.0-sha3-r-sdp-3-balance,light,1400,239440,96184,,,,,,
+crossv2.0-sha3-r-sdp-3-balance,ref,16832,463484,248804,,,,,,
+crossv2.0-sha3-r-sdp-3-fast,light,1400,119024,29984,,,,,,
+crossv2.0-sha3-r-sdp-3-fast,ref,16832,257976,124648,,,,,,
+crossv2.0-sha3-r-sdp-3-small,light,1400,356008,139336,,,,,,
+crossv2.0-sha3-r-sdp-3-small,ref,0,0,0,,,,,,
+crossv2.0-sha3-r-sdp-5-balance,light,1544,425016,168692,,,,,,
+crossv2.0-sha3-r-sdp-5-balance,ref,0,0,0,,,,,,
+crossv2.0-sha3-r-sdp-5-fast,light,1544,211952,51512,,,,,,
+crossv2.0-sha3-r-sdp-5-fast,ref,29624,463008,222424,,,,,,
+crossv2.0-sha3-r-sdp-5-small,light,0,0,0,,,,,,
+crossv2.0-sha3-r-sdp-5-small,ref,0,0,0,,,,,,
+crossv2.0-sha3-r-sdpg-1-balance,light,1400,91304,42640,,,,,,
+crossv2.0-sha3-r-sdpg-1-balance,ref,3984,156712,94372,,,,,,
+crossv2.0-sha3-r-sdpg-1-fast,light,1400,40440,12760,,,,,,
+crossv2.0-sha3-r-sdpg-1-fast,ref,3984,77768,42168,,,,,,
+crossv2.0-sha3-r-sdpg-1-small,light,1400,177944,80784,,,,,,
+crossv2.0-sha3-r-sdpg-1-small,ref,3984,309608,184632,,,,,,
+crossv2.0-sha3-r-sdpg-3-balance,light,1480,141672,66656,,,,,,
+crossv2.0-sha3-r-sdpg-3-balance,ref,7440,240896,145108,,,,,,
+crossv2.0-sha3-r-sdpg-3-fast,light,1480,87656,25904,,,,,,
+crossv2.0-sha3-r-sdpg-3-fast,ref,7440,170424,91312,,,,,,
+crossv2.0-sha3-r-sdpg-3-small,light,1480,262736,120536,,,,,,
+crossv2.0-sha3-r-sdpg-3-small,ref,7440,453168,270912,,,,,,
+crossv2.0-sha3-r-sdpg-5-balance,light,1624,245672,115536,,,,,,
+crossv2.0-sha3-r-sdpg-5-balance,ref,11776,423232,255760,,,,,,
+crossv2.0-sha3-r-sdpg-5-fast,light,1624,151252,41824,,,,,,
+crossv2.0-sha3-r-sdpg-5-fast,ref,11776,300704,159872,,,,,,
+crossv2.0-sha3-r-sdpg-5-small,light,1624,434416,199368,,,,,,
+crossv2.0-sha3-r-sdpg-5-small,ref,0,0,0,,,,,,
+Hashing Evaluation,,,,,,,,,,
+Key Encapsulation Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [%],Encapsulation [%],Decapsulation [%],,,,,,
+Signature Schemes,,,,,,,,,,
+Scheme,Implementation,Key Generation [%],Sign [%],Verify [%],,,,,,
+crossv2.0-sha3-r-sdp-1-balance,light,55.6,53.6,70.6,,,,,,
+crossv2.0-sha3-r-sdp-1-balance,ref,63.8,51.4,70.8,,,,,,
+crossv2.0-sha3-r-sdp-1-fast,light,55.7,47.7,49.8,,,,,,
+crossv2.0-sha3-r-sdp-1-fast,ref,63.8,44.8,49.3,,,,,,
+crossv2.0-sha3-r-sdp-1-small,light,55.7,51.4,75.2,,,,,,
+crossv2.0-sha3-r-sdp-1-small,ref,63.8,52.9,75.6,,,,,,
+crossv2.0-sha3-r-sdp-3-balance,light,58.6,43.2,65.1,,,,,,
+crossv2.0-sha3-r-sdp-3-balance,ref,65.0,43.7,65.2,,,,,,
+crossv2.0-sha3-r-sdp-3-fast,light,58.6,39.7,45.0,,,,,,
+crossv2.0-sha3-r-sdp-3-fast,ref,65.0,41.2,44.4,,,,,,
+crossv2.0-sha3-r-sdp-3-small,light,58.6,43.1,70.7,,,,,,
+crossv2.0-sha3-r-sdp-3-small,ref,0.0,0.0,0.0,,,,,,
+crossv2.0-sha3-r-sdp-5-balance,light,58.6,37.3,61.0,,,,,,
+crossv2.0-sha3-r-sdp-5-balance,ref,0.0,0.0,0.0,,,,,,
+crossv2.0-sha3-r-sdp-5-fast,light,58.6,32.1,39.8,,,,,,
+crossv2.0-sha3-r-sdp-5-fast,ref,66.3,31.9,39.2,,,,,,
+crossv2.0-sha3-r-sdp-5-small,light,0.0,0.0,0.0,,,,,,
+crossv2.0-sha3-r-sdp-5-small,ref,0.0,0.0,0.0,,,,,,
+crossv2.0-sha3-r-sdpg-1-balance,light,55.7,62.5,63.3,,,,,,
+crossv2.0-sha3-r-sdpg-1-balance,ref,69.0,62.3,63.2,,,,,,
+crossv2.0-sha3-r-sdpg-1-fast,light,55.7,55.9,52.7,,,,,,
+crossv2.0-sha3-r-sdpg-1-fast,ref,69.0,54.2,51.9,,,,,,
+crossv2.0-sha3-r-sdpg-1-small,light,55.7,62.4,64.3,,,,,,
+crossv2.0-sha3-r-sdpg-1-small,ref,69.0,62.3,64.2,,,,,,
+crossv2.0-sha3-r-sdpg-3-balance,light,63.1,54.3,54.6,,,,,,
+crossv2.0-sha3-r-sdpg-3-balance,ref,68.5,53.6,54.1,,,,,,
+crossv2.0-sha3-r-sdpg-3-fast,light,63.1,48.8,46.8,,,,,,
+crossv2.0-sha3-r-sdpg-3-fast,ref,68.5,48.1,46.1,,,,,,
+crossv2.0-sha3-r-sdpg-3-small,light,63.1,54.2,57.8,,,,,,
+crossv2.0-sha3-r-sdpg-3-small,ref,68.5,52.5,57.7,,,,,,
+crossv2.0-sha3-r-sdpg-5-balance,light,60.8,47.3,46.1,,,,,,
+crossv2.0-sha3-r-sdpg-5-balance,ref,67.6,45.5,46.1,,,,,,
+crossv2.0-sha3-r-sdpg-5-fast,light,60.8,43.5,40.4,,,,,,
+crossv2.0-sha3-r-sdpg-5-fast,ref,67.6,42.4,39.8,,,,,,
+crossv2.0-sha3-r-sdpg-5-small,light,60.8,45.0,48.7,,,,,,
+crossv2.0-sha3-r-sdpg-5-small,ref,0.0,0.0,0.0,,,,,,
+Size Evaluation,,,,,,,,,,
+Key Encapsulation Schemes,,,,,,,,,,
+Scheme,Implementation,.text [bytes],.data [bytes],.bss [bytes],Total [bytes],,,,,
+Signature Schemes,,,,,,,,,,
+Scheme,Implementation,.text [bytes],.data [bytes],.bss [bytes],Total [bytes],,,,,

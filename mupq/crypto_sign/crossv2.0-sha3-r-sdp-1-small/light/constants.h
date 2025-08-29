@@ -1,0 +1,301 @@
+#include "variant.h"
+
+/* Derived parameters computed via compute_derived_parameters.py */
+#if (defined(CATEGORY_1) && defined(RSDP) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 2, 2, 58, 58}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 30, 60, 64, 128}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 1, 0, 28, 0, 128}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {185, 93, 30}
+#define TREE_CONSECUTIVE_LEAVES {128, 28, 1}
+#define TREE_NODES_TO_STORE 82
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 8
+#define BITS_N_FP_CT_RNG 1127
+#define BITS_BETA_FPSTAR_CT_RNG 1421
+#define BITS_V_CT_RNG 28028
+#define BITS_N_FZ_CT_RNG 717
+#define BITS_CWSTR_RNG 3656
+
+#elif (defined(CATEGORY_1) && defined(RSDP) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 256}
+#define TREE_SUBROOTS 1
+#define TREE_LEAVES_START_INDICES {255}
+#define TREE_CONSECUTIVE_LEAVES {256}
+#define TREE_NODES_TO_STORE 108
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 5
+#define BITS_N_FP_CT_RNG 1127
+#define BITS_BETA_FPSTAR_CT_RNG 2170
+#define BITS_V_CT_RNG 28028
+#define BITS_N_FZ_CT_RNG 717
+#define BITS_CWSTR_RNG 4776
+
+#elif (defined(CATEGORY_1) && defined(RSDP) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 16, 16, 16, 16, 16, 16}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 16, 32, 64, 128, 256, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 512}
+#define TREE_SUBROOTS 2
+#define TREE_LEAVES_START_INDICES {527, 23}
+#define TREE_CONSECUTIVE_LEAVES {512, 8}
+#define TREE_NODES_TO_STORE 129
+#define TREE_MAX_DEPTH 10
+#define EXPECTED_DEPTH 5
+#define BITS_N_FP_CT_RNG 1127
+#define BITS_BETA_FPSTAR_CT_RNG 4130
+#define BITS_V_CT_RNG 28028
+#define BITS_N_FZ_CT_RNG 717
+#define BITS_CWSTR_RNG 10390
+
+#elif (defined(CATEGORY_3) && defined(RSDP) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 2, 30}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 126, 224}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 1, 14, 224}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {253, 239, 126}
+#define TREE_CONSECUTIVE_LEAVES {224, 14, 1}
+#define TREE_NODES_TO_STORE 125
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 8
+#define BITS_N_FP_CT_RNG 1673
+#define BITS_BETA_FPSTAR_CT_RNG 2163
+#define BITS_V_CT_RNG 60711
+#define BITS_N_FZ_CT_RNG 1065
+#define BITS_CWSTR_RNG 5264
+
+#elif (defined(CATEGORY_3) && defined(RSDP) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0, 256}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 128, 256}
+#define TREE_SUBROOTS 2
+#define TREE_LEAVES_START_INDICES {511, 383}
+#define TREE_CONSECUTIVE_LEAVES {256, 128}
+#define TREE_NODES_TO_STORE 165
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 6
+#define BITS_N_FP_CT_RNG 1673
+#define BITS_BETA_FPSTAR_CT_RNG 3255
+#define BITS_V_CT_RNG 60711
+#define BITS_N_FZ_CT_RNG 1065
+#define BITS_CWSTR_RNG 8586
+
+#elif (defined(CATEGORY_3) && defined(RSDP) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 8, 8, 8, 8, 136, 136}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 24, 48, 96, 192, 256, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 4, 0, 0, 0, 64, 0, 512}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {647, 327, 27}
+#define TREE_CONSECUTIVE_LEAVES {512, 64, 4}
+#define TREE_NODES_TO_STORE 184
+#define TREE_MAX_DEPTH 10
+#define EXPECTED_DEPTH 6
+#define BITS_N_FP_CT_RNG 1673
+#define BITS_BETA_FPSTAR_CT_RNG 4718
+#define BITS_V_CT_RNG 60711
+#define BITS_N_FZ_CT_RNG 1065
+#define BITS_CWSTR_RNG 12880
+
+#elif (defined(CATEGORY_5) && defined(RSDP) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 2, 2, 2, 2, 2, 2, 130}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 6, 12, 24, 48, 96, 192, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 1, 0, 0, 0, 0, 0, 64, 256}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {385, 321, 6}
+#define TREE_CONSECUTIVE_LEAVES {256, 64, 1}
+#define TREE_NODES_TO_STORE 167
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 9
+#define BITS_N_FP_CT_RNG 2247
+#define BITS_BETA_FPSTAR_CT_RNG 2905
+#define BITS_V_CT_RNG 108689
+#define BITS_N_FZ_CT_RNG 1431
+#define BITS_CWSTR_RNG 8343
+
+#elif (defined(CATEGORY_5) && defined(RSDP) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 0, 512}
+#define TREE_SUBROOTS 1
+#define TREE_LEAVES_START_INDICES {511}
+#define TREE_CONSECUTIVE_LEAVES {512}
+#define TREE_NODES_TO_STORE 220
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 6
+#define BITS_N_FP_CT_RNG 2247
+#define BITS_BETA_FPSTAR_CT_RNG 4347
+#define BITS_V_CT_RNG 108689
+#define BITS_N_FZ_CT_RNG 1431
+#define BITS_CWSTR_RNG 10746
+
+#elif (defined(CATEGORY_5) && defined(RSDP) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 128}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256, 384, 768}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 768}
+#define TREE_SUBROOTS 2
+#define TREE_LEAVES_START_INDICES {895, 447}
+#define TREE_CONSECUTIVE_LEAVES {768, 64}
+#define TREE_NODES_TO_STORE 251
+#define TREE_MAX_DEPTH 10
+#define EXPECTED_DEPTH 6
+#define BITS_N_FP_CT_RNG 2247
+#define BITS_BETA_FPSTAR_CT_RNG 6734
+#define BITS_V_CT_RNG 108689
+#define BITS_N_FZ_CT_RNG 1431
+#define BITS_CWSTR_RNG 18150
+
+#elif (defined(CATEGORY_1) && defined(RSDPG) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 0, 2, 6, 6, 38, 38}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 14, 24, 48, 64, 128}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 1, 2, 0, 16, 0, 128}
+#define TREE_SUBROOTS 4
+#define TREE_LEAVES_START_INDICES {165, 85, 27, 14}
+#define TREE_CONSECUTIVE_LEAVES {128, 16, 2, 1}
+#define TREE_NODES_TO_STORE 76
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 8
+#define BITS_N_FP_CT_RNG 729
+#define BITS_BETA_FPSTAR_CT_RNG 1647
+#define BITS_V_CT_RNG 6624
+#define BITS_W_CT_RNG 5677
+#define BITS_M_FZ_CT_RNG 343
+#define BITS_CWSTR_RNG 3472
+
+#elif (defined(CATEGORY_1) && defined(RSDPG) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 256}
+#define TREE_SUBROOTS 1
+#define TREE_LEAVES_START_INDICES {255}
+#define TREE_CONSECUTIVE_LEAVES {256}
+#define TREE_NODES_TO_STORE 101
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 5
+#define BITS_N_FP_CT_RNG 729
+#define BITS_BETA_FPSTAR_CT_RNG 2682
+#define BITS_V_CT_RNG 6624
+#define BITS_W_CT_RNG 5677
+#define BITS_M_FZ_CT_RNG 343
+#define BITS_CWSTR_RNG 4776
+
+#elif (defined(CATEGORY_1) && defined(RSDPG) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 0, 512}
+#define TREE_SUBROOTS 1
+#define TREE_LEAVES_START_INDICES {511}
+#define TREE_CONSECUTIVE_LEAVES {512}
+#define TREE_NODES_TO_STORE 117
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 4
+#define BITS_N_FP_CT_RNG 729
+#define BITS_BETA_FPSTAR_CT_RNG 5085
+#define BITS_V_CT_RNG 6624
+#define BITS_W_CT_RNG 5677
+#define BITS_M_FZ_CT_RNG 343
+#define BITS_CWSTR_RNG 9153
+
+#elif (defined(CATEGORY_3) && defined(RSDPG) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 64}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 192}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 32, 192}
+#define TREE_SUBROOTS 2
+#define TREE_LEAVES_START_INDICES {255, 223}
+#define TREE_CONSECUTIVE_LEAVES {192, 32}
+#define TREE_NODES_TO_STORE 119
+#define TREE_MAX_DEPTH 8
+#define EXPECTED_DEPTH 8
+#define BITS_N_FP_CT_RNG 1071
+#define BITS_BETA_FPSTAR_CT_RNG 2502
+#define BITS_V_CT_RNG 14211
+#define BITS_W_CT_RNG 11655
+#define BITS_M_FZ_CT_RNG 539
+#define BITS_CWSTR_RNG 5128
+
+#elif (defined(CATEGORY_3) && defined(RSDPG) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 8, 24, 24, 24, 24}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 24, 32, 64, 128, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 4, 8, 0, 0, 0, 256}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {279, 47, 27}
+#define TREE_CONSECUTIVE_LEAVES {256, 8, 4}
+#define TREE_NODES_TO_STORE 138
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 7
+#define BITS_N_FP_CT_RNG 1071
+#define BITS_BETA_FPSTAR_CT_RNG 2925
+#define BITS_V_CT_RNG 14211
+#define BITS_W_CT_RNG 11655
+#define BITS_M_FZ_CT_RNG 539
+#define BITS_CWSTR_RNG 6444
+
+#elif (defined(CATEGORY_3) && defined(RSDPG) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 0, 0, 0, 0, 512}
+#define TREE_SUBROOTS 1
+#define TREE_LEAVES_START_INDICES {511}
+#define TREE_CONSECUTIVE_LEAVES {512}
+#define TREE_NODES_TO_STORE 165
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 5
+#define BITS_N_FP_CT_RNG 1071
+#define BITS_BETA_FPSTAR_CT_RNG 5238
+#define BITS_V_CT_RNG 14211
+#define BITS_W_CT_RNG 11655
+#define BITS_M_FZ_CT_RNG 539
+#define BITS_CWSTR_RNG 9981
+
+#elif (defined(CATEGORY_5) && defined(RSDPG) && defined(SPEED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 8, 24, 88, 88}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 56, 96, 128, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 4, 8, 32, 0, 256}
+#define TREE_SUBROOTS 4
+#define TREE_LEAVES_START_INDICES {343, 183, 111, 59}
+#define TREE_CONSECUTIVE_LEAVES {256, 32, 8, 4}
+#define TREE_NODES_TO_STORE 153
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 9
+#define BITS_N_FP_CT_RNG 1431
+#define BITS_BETA_FPSTAR_CT_RNG 3357
+#define BITS_V_CT_RNG 24192
+#define BITS_W_CT_RNG 20594
+#define BITS_M_FZ_CT_RNG 679
+#define BITS_CWSTR_RNG 7929
+
+#elif (defined(CATEGORY_5) && defined(RSDPG) && defined(BALANCED))
+#define TREE_OFFSETS {0, 0, 0, 0, 0, 0, 8, 8, 8, 200}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 16, 32, 56, 112, 224, 256}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 0, 0, 4, 0, 0, 96, 256}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {455, 359, 59}
+#define TREE_CONSECUTIVE_LEAVES {256, 96, 4}
+#define TREE_NODES_TO_STORE 185
+#define TREE_MAX_DEPTH 9
+#define EXPECTED_DEPTH 7
+#define BITS_N_FP_CT_RNG 1431
+#define BITS_BETA_FPSTAR_CT_RNG 3897
+#define BITS_V_CT_RNG 24192
+#define BITS_W_CT_RNG 20594
+#define BITS_M_FZ_CT_RNG 679
+#define BITS_CWSTR_RNG 8937
+
+#elif (defined(CATEGORY_5) && defined(RSDPG) && defined(SIG_SIZE))
+#define TREE_OFFSETS {0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 260}
+#define TREE_NODES_PER_LEVEL {1, 2, 4, 8, 12, 24, 48, 96, 192, 384, 512}
+#define TREE_LEAVES_PER_LEVEL {0, 0, 0, 2, 0, 0, 0, 0, 0, 128, 512}
+#define TREE_SUBROOTS 3
+#define TREE_LEAVES_START_INDICES {771, 643, 13}
+#define TREE_CONSECUTIVE_LEAVES {512, 128, 2}
+#define TREE_NODES_TO_STORE 220
+#define TREE_MAX_DEPTH 10
+#define EXPECTED_DEPTH 6
+#define BITS_N_FP_CT_RNG 1431
+#define BITS_BETA_FPSTAR_CT_RNG 6597
+#define BITS_V_CT_RNG 24192
+#define BITS_W_CT_RNG 20594
+#define BITS_M_FZ_CT_RNG 679
+#define BITS_CWSTR_RNG 15140
+
+#endif

@@ -1,0 +1,28 @@
+# Fdb version 4
+["pdflatex"] 1752083924.68943 "main.tex" "out/main.pdf" "main" 1752083924.87244 0
+  "/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5467241 3c3f8eb8d46b9af4d3386e76e9b4b73e ""
+  "/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3353347 e5b84f5240432c8fb1ba675f3d1183dc ""
+  "/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env/share/texmf-var/web2c/texmf.cnf" 1 43655 156f747d503e73d061c43a664b9c81a7 ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/base/article.cls" 1 20144 63d8bacaf52e5abf4db3bc322373e1d4 ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/base/size10.clo" 1 8448 5cf247d4bd0c7d5d711bbbdf111fae2e ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/booktabs/booktabs.sty" 1 6078 f1cb470c9199e7110a27851508ed7a5c ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/l3backend/l3backend-pdftex.def" 1 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/multirow/multirow.sty" 1 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
+  "/nix/store/f8fxz33kaqksq45sshcq2lms1xvsfz7s-texlive-2024-env-texmfdist/tex/latex/tools/multicol.sty" 1 32879 f4cfa2226c995da5b04a89ee47abf182 ""
+  "Hashing_Evaluation-Signature_Schemes.tex" 1752083532.76778 1972 c43699de300e11896629ec0f702dd367 ""
+  "Memory_Evaluation-Signature_Schemes.tex" 1752083532.72278 2235 5272f1cdf20bc575ed0a6c7b5c2a1a07 ""
+  "Speed_Evaluation-Signature_Schemes.tex" 1752083532.68677 2230 a0b5b022cbc354622163e906731f0ec0 ""
+  "aux/./Hashing_Evaluation-Signature_Schemes.aux" 1752083924.85418 453 29017f3e68a681917ca9d4371834939f "pdflatex"
+  "aux/./Memory_Evaluation-Signature_Schemes.aux" 1752083924.84418 452 6ab8d4d254666a68229ef35aa64d19ac "pdflatex"
+  "aux/./Speed_Evaluation-Signature_Schemes.aux" 1752083924.84918 451 5cffa9d52fb0bf06997b869ead5beb31 "pdflatex"
+  "aux/main.aux" 1752083924.85418 185 1a29cc85fc006685ae45c38027c22f52 "pdflatex"
+  "main.tex" 1752083922.00113 275 feeda7dd7d833715f4e8a13723be32b0 ""
+  (generated)
+  "aux/./Hashing_Evaluation-Signature_Schemes.aux"
+  "aux/./Memory_Evaluation-Signature_Schemes.aux"
+  "aux/./Speed_Evaluation-Signature_Schemes.aux"
+  "aux/main.aux"
+  "aux/main.log"
+  "out/main.pdf"
+  (rewritten before read)
